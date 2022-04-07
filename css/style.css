@@ -1,100 +1,74 @@
 @charset "utf-8";
 /* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
-*
-{
-	padding:0;
-	margin:0;
-}
-
-body
-{
-	font-family:"Arial", "Sans-serif";
-	width: 8.5in;
-	height:22in;
-	padding: 3em;
-}
-/*-------------For Week 4 Gradient Background*/
-body.body1 {
-	background-image:linear-gradient(0deg, rgba(255,0,0,0.5), rgba(255,0,255,0.5));
-}
-body.body2 {
-	background-image:linear-gradient(180deg, rgba(255,255,0,0.5), rgba(0,0,255,0.5));
-}
-body.body3 {
-	background-image:linear-gradient(180deg, rgba(255,0,0,0.5), rgba(0,0,255,0.5));
-}
-body.body4 {
-	background-image:linear-gradient(90deg, rgba(0,255,0,0.5), rgba(255,0,255,0.5), rgba(0,255,0,0.5));
+html {
+	width: 75%;
+	margin: auto;
+	background-color: rgba(200,200,255,1);
+	font-family: 'EB Garamond', serif;
 }
 
-/*---------End of Week 4*/
-header
-{
+
+header {
+	background-image:linear-gradient(0deg,rgba(200,200,255,1),rgba(200,200,255,.9),rgba(255,255,255,0.3)) ,url('../image/BANNER2.png');
+	background-size: cover;
+	padding: 10px;
+	text-align: center;	
+}
+
+
+/*Image Controls*/
+img.logo {
+	width: 10%;
+	position: fixed;
+	top: 5%;
+	left: 87%;
+	z-index: 2;
+}
+
+img.sun, img.moon {
+	width: 40%;
+	height: 40%;
+	float:inherit;
+		
+}
+
+img.sun:hover, img.moon:hover {
+	opacity: 50%;
+}
+
+/*Paragraph and image formatting */
+div.p1, div.p2{
+	display: flex;
+	justify-content: space-between;
+}
+
+section {
+	width: 50%;
+}
+
+
+/*footer stuff */
+footer {
 	text-align: center;
 }
-/*-----------For Office Hours*/
-aside
-{
-	float: right;
-	text-align: center;
-	font-size: 0.75em;
-}
-p.days
-{
-	text-align: right;
-	word-spacing: 6em
-}
-p.times
-{
-	text-align: left;
-	word-spacing: 1em;
-}
-/*------------------------------*/
-section.disability
-{
-	text-align: center;
-}
-section.disability p
-{
-	text-align: left;
-	border-style:solid;
-	margin: 1em;
-	padding: 1em;
-}
-/*---------------------*/
-article.page1, article.page2
-{
-	margin: 1em;
-}
-/*For Material Spacing */
-section.materials p.mTitle
-{
-	text-align: center;
-	word-spacing:6.5em;
-}
-section.materials
-{
-	font-size: 0.75em
-}
-/*For the page number on top right of page */
 
-header.pageNum1, header.pageNum2
-{
- 	text-align: right;
+/* Links Control */
+a {
+	display: block;
+	text-decoration: none;
+	color: rgba(0,0,0,1);
+	background: rgba(255,180,180,1);
+	padding: 10px;
+	line-height: 50px;
+	border: 5px outset rgba(255,255,255,1);
 }
-
-
-/*---------For the spans */
-.bold
-{
-	font-weight:700;
+a:hover {
+	background-image: linear-gradient(270deg, rgba(255,255,255,1),rgba(255,180,180,1));
+	border: 5px inset rgba(120,255,255,1);
+	border-radius: 10vw;
 }
-.red
-{
+a:active {
 	color: rgba(255,0,0,1);
-}
-.underline
-{
-	text-decoration: underline;
 }
